@@ -15,6 +15,7 @@
 	<div class="left-spacer"></div>
 	<nav>
 		<a href="/">Home</a>
+		<a href="/about">About</a>
 		<a href="/research">Research</a>
 		<a href="/blog">Blog</a>
 		<a href="/photo">Photo</a>
