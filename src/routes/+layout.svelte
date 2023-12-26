@@ -1,119 +1,85 @@
-<script>
-	import Icon from '@iconify/svelte';
+<script lang="ts">
+	import '../app.postcss';
+	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 
-	import { theme } from '$lib/stores';
-	function toggleTheme() {
-		theme.update((t) => (t === 'light' ? 'dark' : 'light'));
-	}
+	// Highlight JS
+	import hljs from 'highlight.js/lib/core';
+	import 'highlight.js/styles/github-dark.css';
+	import { storeHighlightJs } from '@skeletonlabs/skeleton';
+	import xml from 'highlight.js/lib/languages/xml'; // for HTML
+	import css from 'highlight.js/lib/languages/css';
+	import javascript from 'highlight.js/lib/languages/javascript';
+	import typescript from 'highlight.js/lib/languages/typescript';
+
+	hljs.registerLanguage('xml', xml); // for HTML
+	hljs.registerLanguage('css', css);
+	hljs.registerLanguage('javascript', javascript);
+	hljs.registerLanguage('typescript', typescript);
+	storeHighlightJs.set(hljs);
+
+	// Floating UI for Popups
+	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
+	import { storePopup } from '@skeletonlabs/skeleton';
+	import { page } from '$app/stores';
+	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	// Font Awesome
+	import '@fortawesome/fontawesome-free/css/fontawesome.css';
+	import '@fortawesome/fontawesome-free/css/brands.css';
+	import '@fortawesome/fontawesome-free/css/solid.css';
+
+	// Icon
+	import Icon from '$lib/Icon.svelte';
 </script>
 
-<meta name="color-scheme" content={$theme} />
-<link rel="stylesheet" href={`/theme/${$theme}.css`} />
-
-<!-- Header section -->
-<header>
-	<div class="left-spacer"></div>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/research">Research</a>
-		<a href="/blog">Blog</a>
-		<a href="/photo">Photo</a>
-	</nav>
-	<button class="theme-button" on:click={toggleTheme}>
-		{#if $theme === 'light'}
-			<Icon icon="octicon:moon-16" width="14pt" />
-		{:else}
-			<Icon icon="octicon:sun-16" width="14pt" />
-		{/if}
-	</button>
-</header>
-
-<!-- Slot for page-specific content -->
-<slot />
-<body> </body>
-
-<!-- Footer section -->
-<footer>
-	<a href="https://github.com/HongAo-Yang"> <Icon icon="octicon:mark-github" width="14pt" /></a>
-	<a href="https://www.researchgate.net/profile/Hongao-Yang"
-		><Icon icon="academicons:researchgate-square" width="14pt" /></a
-	>
-	<a href="mailto:yha21@tsinghua.edu.cn">
-		<Icon icon="mdi:email" width="16pt" />
-	</a>
-</footer>
-
-<style>
-	/* Global styles */
-	body {
-		font-family: 'Arial', sans-serif;
-		padding: 0;
-		max-width: 800px;
-		margin: 0 auto;
-		background-color: var(--backgroundcolor);
-		color: var(--textcolor);
-	}
-	button {
-		border: none; /* Remove border */
-		background-color: var(--headerfooterbackgroundcolor);
-	}
-	button:hover {
-		cursor: pointer;
-		color: var(--linkcolor);
-	}
-
-	/* Header styling */
-	header {
-		background-color: var(--headerfooterbackgroundcolor);
-		padding: 1rem 0;
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		align-items: center;
-	}
-
-	.left-spacer {
-		grid-column: 1/2;
-	}
-	nav {
-		display: flex;
-		justify-content: center;
-		grid-column: 2/3;
-	}
-
-	nav a {
-		margin: 0 1rem;
-		text-decoration: none;
-		color: var(--headerfootertextcolor);
-		font-weight: bold;
-	}
-
-	nav a:hover {
-		color: var(--linkcolor);
-	}
-
-	.theme-button {
-		margin-right: 1rem;
-		grid-column: 3/4;
-	}
-
-	/* Footer styling */
-	footer {
-		background-color: var(--headerfooterbackgroundcolor);
-		padding: 1rem 0;
-		display: flex; /* Use flexbox */
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
-
-	footer a {
-		margin: 0 1rem;
-		text-decoration: none;
-		color: var(--headerfootertextcolor);
-	}
-
-	footer a:hover {
-		color: var(--linkcolor);
-	}
-</style>
+<!-- App Shell -->
+<AppShell>
+	<svelte:fragment slot="header">
+		<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
+			<svelte:fragment slot="lead">
+				<a href="/">
+					<Icon />
+				</a>
+			</svelte:fragment>
+			<TabGroup
+				justify="justify-center"
+				active="variant-filled-primary"
+				hover="hover:variant-soft-primary"
+				flex="flex-1 lg:flex-none"
+				rounded=""
+				border=""
+				class="bg-surface-100-800-token w-full"
+			>
+				<TabAnchor href="/" selected={$page.url.pathname === '/'}>
+					<span>Home</span>
+				</TabAnchor>
+				<TabAnchor href="/about" selected={$page.url.pathname === '/about'}>
+					<span>About</span>
+				</TabAnchor>
+				<TabAnchor href="/research" selected={$page.url.pathname === '/research'}>
+					<span>Research</span>
+				</TabAnchor>
+				<TabAnchor href="/blog" selected={$page.url.pathname === '/blog'}>
+					<span>Blog</span>
+				</TabAnchor>
+				<TabAnchor href="/photo" selected={$page.url.pathname === '/photo'}>
+					<span>Photo</span>
+				</TabAnchor>
+			</TabGroup>
+			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
+		</AppBar>
+	</svelte:fragment>
+	<!-- Page Route Content -->
+	<slot />
+	<svelte:fragment slot="footer">
+		<div class="bg-surface-100-800-token w-full flex justify-center items-center gap-4 py-5">
+			<a href="https://github.com/HongAo-Yang"> <i class="fa-brands text-[24px] fa-github" /> </a>
+			<a href="https://www.researchgate.net/profile/Hongao-Yang">
+				<i class="fa-brands text-[24px] fa-researchgate" />
+			</a>
+			<a href="mailto:yha21@tsinghua.edu.cn"> <i class="fa-solid text-[24px] fa-envelope" /> </a>
+		</div>
+	</svelte:fragment>
+</AppShell>

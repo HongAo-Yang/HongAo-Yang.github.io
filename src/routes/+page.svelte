@@ -1,52 +1,37 @@
-<img src="/hongao.jpg" alt="me" width="200" />
+<script>
+	import { Avatar } from '@skeletonlabs/skeleton';
+</script>
 
-<h1>HongAo Yang</h1>
+<div class="page-container">
+	<div class="flex justify-center">
+		<Avatar src="/hongao.jpg" width="w-48" />
+	</div>
+	<h1 class="h1 text-center">HongAo Yang</h1>
 
-<p>
-	I'm a PhD student currently studying at Tsinghua University.
-	<br />
-	I'm interested in heat conduction at atomic scale and interfaces, machine learning potentials, and
-	topological phonons materials.
-</p>
-<p>
-	I'm member of Prof. BingYang Cao's group, find more about us <a
-		href="http://www.heatenergist.org/"
-	>
-		here</a
-	>.
-</p>
-<div class="text-block">
-	<p>Check out my latest work</p>
-	<p>
-		<a href="https://doi.org/10.1063/5.0171201"
-			>Mode-resolved phonon transmittance using lattice dynamics: Robust algorithm and statistical
-			characteristics</a
-		>
+	<p class="text-center">I'm a PhD student currently studying at Tsinghua University.</p>
+	<p class="text-center">
+		I'm interested in heat conduction at atomic scale and interfaces, machine learning potentials,
+		and topological phonons materials.
 	</p>
+	<p class="text-center">
+		I'm member of Prof. BingYang Cao's group, find more about us <a
+			class="anchor"
+			href="http://www.heatenergist.org/"
+		>
+			here</a
+		>.
+	</p>
+	<a href="https://doi.org/10.1063/5.0171201" class="block card card-hover p-4">
+		<p class="text-center">
+			Check out my latest work:
+			<br />
+			Mode-resolved phonon transmittance using lattice dynamics: Robust algorithm and statistical characteristics
+		</p>
+	</a>
+	<p class="text-center">
+		Outside of work, I enjoy photographing. Find my photos <a class="anchor" href="/photo">here</a>.
+		📷
+	</p>
+
+	<p class="text-center">This site is under active development...🧑‍💻</p>
 </div>
-<p>
-	Outside of work, I enjoy photographing. Find my photos <a href="/photo">here</a>. 📷
-</p>
-
-<p>This site is under active development...🧑‍💻</p>
-
-<style>
-	h1 {
-		text-align: center;
-	}
-	img[alt='me'] {
-		border-radius: 50%;
-		object-fit: cover;
-		height: 10em;
-		width: 10em;
-		display: block;
-		margin: 4em auto 0;
-	}
-	.text-block {
-		text-align: center;
-
-		padding: 1rem;
-		margin: 1rem 0;
-		background-color: var(--headerfooterbackgroundcolor);
-	}
-</style>
