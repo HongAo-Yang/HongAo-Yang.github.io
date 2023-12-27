@@ -29,9 +29,6 @@
 	import '@fortawesome/fontawesome-free/css/fontawesome.css';
 	import '@fortawesome/fontawesome-free/css/brands.css';
 	import '@fortawesome/fontawesome-free/css/solid.css';
-
-	// Icon
-	import Icon from '$lib/Icon.svelte';
 </script>
 
 <!-- App Shell -->
@@ -39,8 +36,17 @@
 	<svelte:fragment slot="header">
 		<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
 			<svelte:fragment slot="lead">
-				<a href="/">
-					<Icon />
+				<a href="/" class="lg:!ml-0 w-[48px] lg:w-auto overflow-hidden">
+					<svg
+						class="fill-token"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 178 160"
+						height="32px"
+					>
+						<polygon
+							points="138 0 138 80 78 80 116 0 76 0 58 37.89 40 0 0 0 38 80 38 160 78 160 78 100 138 100 138 160 178 160 178 0 138 0"
+						/>
+					</svg>
 				</a>
 			</svelte:fragment>
 			<TabGroup
