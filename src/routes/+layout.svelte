@@ -74,18 +74,20 @@
 					<span>Photo</span>
 				</TabAnchor>
 			</TabGroup>
-			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
+			<svelte:fragment slot="trail">
+				<a href="https://github.com/HongAo-Yang" target="_blank" rel="noreferrer">
+					<i class="fa-brands text-[24px] fa-github" />
+				</a>
+				<a href="https://www.researchgate.net/profile/Hongao-Yang" target="_blank" rel="noreferrer">
+					<i class="fa-brands text-[24px] fa-researchgate" />
+				</a>
+				<a href="mailto:yha21@tsinghua.edu.cn" target="_blank" rel="noreferrer">
+					<i class="fa-solid text-[24px] fa-envelope" />
+				</a>
+				<LightSwitch /></svelte:fragment
+			>
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<slot />
-	<svelte:fragment slot="footer">
-		<div class="bg-surface-100-800-token w-full flex justify-center items-center gap-4 py-5">
-			<a href="https://github.com/HongAo-Yang"> <i class="fa-brands text-[24px] fa-github" /> </a>
-			<a href="https://www.researchgate.net/profile/Hongao-Yang">
-				<i class="fa-brands text-[24px] fa-researchgate" />
-			</a>
-			<a href="mailto:yha21@tsinghua.edu.cn"> <i class="fa-solid text-[24px] fa-envelope" /> </a>
-		</div>
-	</svelte:fragment>
 </AppShell>
