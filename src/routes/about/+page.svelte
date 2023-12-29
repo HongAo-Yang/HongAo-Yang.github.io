@@ -21,13 +21,13 @@
 	<p>Honours degree of Tsien Excellence in Engineering Program (2021).</p>
 	<p>The first prize in the student research training program of Tsinghua University (2020).</p>
 	<h3 class="h3 underline">Research Interesets</h3>
-	<p>1. Machine learning interatomic potentials.</p>
-	<p>2. Heat conduction at atomic scale and interfaces.</p>
+	<p>Machine learning interatomic potentials.</p>
+	<p>Heat conduction at atomic scale and interfaces.</p>
 	<p>
-		3. Atomical simulation methods such as density functional theory, molecular dynamics, lattice
+		Atomical simulation methods such as density functional theory, molecular dynamics, lattice
 		dynamics, phonon Boltzmann equations.
 	</p>
-	<p>4. Topological phonon materials.</p>
+	<p>Topological phonon materials.</p>
 	<h3 class="h3 underline">Skills</h3>
 	<p>
 		Proficient in density functional theory, molecular dynamics, lattice dynamics, and molecular

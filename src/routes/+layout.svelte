@@ -69,43 +69,10 @@
 	</AppRail>
 </Drawer>
 
-<!-- <div class="btn-group-vertical">
-	<button class="btn" on:click={drawerStore.close}>
-		<i class="fa-solid fa-bars text-xl" />
-	</button>
-	<a href="/" class="btn btn-primary">
-		<span>Home</span>
-	</a>
-	<a href="/about" class="btn btn-primary">
-		<span>About</span>
-	</a>
-</div>
-
-		<button class="btn flex flex-col" on:click={drawerStore.close}>
-			<i class="fa-solid fa-bars text-xl" />
-		</button>
-		<a href="/" class="btn btn-primary">
-			<span>Home</span>
-		</a>
-		<a href="/about" class="btn btn-primary">
-			<span>About</span>
-		</a>
-		<a href="/research" class="btn btn-primary">
-			<span>Research</span>
-		</a>
-		<a href="/blog" class="btn btn-primary">
-			<span>Blog</span>
-		</a>
-		<a href="/photo" class="btn btn-primary">
-			<span>Photo</span>
-		</a>
-	</div>
-</Drawer> -->
-
 <!-- App Shell -->
 <AppShell>
 	<svelte:fragment slot="header">
-		<AppBar class="lg:!hidden">
+		<AppBar class="md:!hidden">
 			<svelte:fragment slot="lead">
 				<div class="flex items-center space-x-4">
 					<!-- menu -->
@@ -132,7 +99,7 @@
 			>
 		</AppBar>
 		<AppBar
-			class="relative hidden lg:block"
+			class="relative hidden md:block"
 			gridColumns="grid-cols-3"
 			slotDefault="place-self-center"
 			slotTrail="place-content-end"
