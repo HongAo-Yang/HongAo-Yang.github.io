@@ -1,12 +1,7 @@
 <div class="page-container">
 	<h1 class="h1 text-center">Research Highlights</h1>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-		<a
-			class="card card-hover p-2"
-			href="https://doi.org/10.1063/5.0129290"
-			target="_blank"
-			rel="noreferrer"
-		>
+		<div class="card p-2">
 			<header class="m-4 flex items-center justify-center">
 				<p class="p-4 space-y-4 text-center">
 					<strong>Topological Protected Planar Nodal Chain Phonons </strong>
@@ -30,13 +25,18 @@
 				calculations. The planar nodal chains result in two distinct classes of drumhead surface
 				states on the [10(–1)0] and the [0001] surface Brillouin zones.
 			</p>
-		</a>
-		<a
-			class="card card-hover p-2"
-			href="https://doi.org/10.1038/s41524-023-00974-0"
-			target="_blank"
-			rel="noreferrer"
-		>
+			<footer class="m-4 flex items-center justify-center">
+				<a
+					href="https://doi.org/10.1063/5.0129290"
+					target="_blank"
+					rel="noreferrer"
+					class="text-blue-500 hover:text-blue-700"
+				>
+					DOI <i class="fa-solid fa-external-link" />
+				</a>
+			</footer>
+		</div>
+		<div class="card p-2">
 			<header class="m-4 flex items-center justify-center">
 				<p class="p-4 space-y-4 text-center">
 					<strong>High-throughput Weyl Points Searching</strong>
@@ -63,13 +63,18 @@
 				Weyl points, referred to as "double Weyl points", are found in 68% and 87% of 1662 half and
 				1550 quaternary Heuslers, respectively.
 			</p>
-		</a>
-		<a
-			class="card card-hover p-2"
-			href="https://doi.org/10.1063/5.0171201"
-			target="_blank"
-			rel="noreferrer"
-		>
+			<footer class="m-4 flex items-center justify-center">
+				<a
+					href="https://doi.org/10.1038/s41524-023-00974-0"
+					target="_blank"
+					rel="noreferrer"
+					class="text-blue-500 hover:text-blue-700"
+				>
+					DOI <i class="fa-solid fa-external-link" />
+				</a>
+			</footer>
+		</div>
+		<div class="card p-2">
 			<header class="m-4 flex items-center justify-center">
 				<p class="p-4 space-y-4 text-center">
 					<strong
@@ -96,6 +101,16 @@
 				the dependency on the frequency and polar angle can be decoupled. The decoupled expression
 				reproduces the TBC precisely.
 			</p>
-		</a>
+			<footer class="m-4 flex items-center justify-center">
+				<a
+					href="https://doi.org/10.1063/5.0171201"
+					target="_blank"
+					rel="noreferrer"
+					class="text-blue-500 hover:text-blue-700"
+				>
+					DOI <i class="fa-solid fa-external-link" />
+				</a>
+			</footer>
+		</div>
 	</div>
 </div>

@@ -95,6 +95,13 @@
 				<a href="https://orcid.org/0000-0002-2916-475X" target="_blank" rel="noreferrer">
 					<i class="fa-brands text-[24px] fa-orcid" />
 				</a>
+				<a
+					href="https://scholar.google.com/citations?hl=en&user=AxUBApkAAAAJ"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<i class="fa-brands text-[24px] fa-google-scholar" />
+				</a>
 				<a href="mailto:yha21@tsinghua.edu.cn" target="_blank" rel="noreferrer">
 					<i class="fa-solid text-[24px] fa-envelope" />
 				</a>
@@ -149,6 +156,13 @@
 				</a>
 				<a href="https://orcid.org/0000-0002-2916-475X" target="_blank" rel="noreferrer">
 					<i class="fa-brands text-[24px] fa-orcid" />
+				</a>
+				<a
+					href="https://scholar.google.com/citations?hl=en&user=AxUBApkAAAAJ"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<i class="fa-brands text-[24px] fa-google-scholar" />
 				</a>
 				<a href="mailto:yha21@tsinghua.edu.cn" target="_blank" rel="noreferrer">
 					<i class="fa-solid text-[24px] fa-envelope" />
