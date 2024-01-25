@@ -30,7 +30,7 @@
 					href="https://doi.org/10.1063/5.0129290"
 					target="_blank"
 					rel="noreferrer"
-					class="text-blue-500 hover:text-blue-700"
+					class="anchor"
 				>
 					DOI <i class="fa-solid fa-external-link" />
 				</a>
@@ -68,7 +68,7 @@
 					href="https://doi.org/10.1038/s41524-023-00974-0"
 					target="_blank"
 					rel="noreferrer"
-					class="text-blue-500 hover:text-blue-700"
+					class="anchor"
 				>
 					DOI <i class="fa-solid fa-external-link" />
 				</a>
@@ -106,7 +106,7 @@
 					href="https://doi.org/10.1063/5.0171201"
 					target="_blank"
 					rel="noreferrer"
-					class="text-blue-500 hover:text-blue-700"
+					class="anchor"
 				>
 					DOI <i class="fa-solid fa-external-link" />
 				</a>
