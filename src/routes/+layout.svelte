@@ -41,6 +41,9 @@
 	function drawerOpen(): void {
 		drawerStore.open();
 	}
+
+	// styles
+	import '$lib/styles/posts.css';
 </script>
 
 <!-- Drawer -->
@@ -58,9 +61,9 @@
 			<svelte:fragment slot="lead"><i class="fa-solid fa-flask text-2xl" /></svelte:fragment>
 			<span>Research</span>
 		</AppRailAnchor>
-		<AppRailAnchor href="/blog" on:click={drawerStore.close}>
+		<AppRailAnchor href="/posts" on:click={drawerStore.close}>
 			<svelte:fragment slot="lead"><i class="fa-solid fa-blog text-2xl" /></svelte:fragment>
-			<span>Blog</span>
+			<span>Posts</span>
 		</AppRailAnchor>
 		<AppRailAnchor href="/photo" on:click={drawerStore.close}>
 			<svelte:fragment slot="lead"><i class="fa-solid fa-camera text-2xl" /></svelte:fragment>
@@ -129,7 +132,7 @@
 				flex="flex-1 lg:flex-none"
 				rounded=""
 				border=""
-				class="bg-surface-100-800-token w-full"
+				class="bg-surface-100-800-token w-full font-bold"
 			>
 				<TabAnchor href="/" selected={$page.url.pathname === '/'}>
 					<span>Home</span>
@@ -140,8 +143,8 @@
 				<TabAnchor href="/research" selected={$page.url.pathname === '/research'}>
 					<span>Research</span>
 				</TabAnchor>
-				<TabAnchor href="/blog" selected={$page.url.pathname === '/blog'}>
-					<span>Blog</span>
+				<TabAnchor href="/posts" selected={$page.url.pathname === '/posts'}>
+					<span>Posts</span>
 				</TabAnchor>
 				<TabAnchor href="/photo" selected={$page.url.pathname === '/photo'}>
 					<span>Photo</span>

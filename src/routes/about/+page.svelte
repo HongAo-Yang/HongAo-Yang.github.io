@@ -1,4 +1,4 @@
-<div class="page-container">
+<div class="page-container-narrow">
 	<h2 class="h2 underline secondary">HongAo Yang</h2>
 	<p>Department of Engineering Mechanics, Tsinghua University</p>
 	<p>Beijing, China</p>
