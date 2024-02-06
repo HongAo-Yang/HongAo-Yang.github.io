@@ -2,7 +2,6 @@
 	import { formatDate } from '$lib/utils';
 	import 'prismjs/themes/prism-okaidia.css';
 	export let data;
-	console.log(data);
 </script>
 
 <div class="page-container-narrow">
