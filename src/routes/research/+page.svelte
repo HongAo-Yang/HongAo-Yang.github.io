@@ -14,7 +14,7 @@
 					class="w-3/5"
 				/>
 			</div>
-			<p class="p-4 space-y-4 text-justify">
+			<p class="p-4 space-y-4 ">
 				In this work, we identify a new class of planar nodal chains in non-symmorphic phononic
 				systems, where the connecting rings lie in the same plane. The constituting nodal rings are
 				protected by mirror symmetry, and their intersection is guaranteed by the combination of
@@ -49,7 +49,7 @@
 					class="w-3/5"
 				/>
 			</div>
-			<p class="p-4 space-y-4 text-justify">
+			<p class="p-4 space-y-4 ">
 				Existing machine learning potentials for predicting phonon properties of crystals are
 				typically limited on a material-to-material basis, primarily due to the exponential scaling
 				of model complexity with the number of atomic species. We address this bottleneck with the
@@ -89,7 +89,7 @@
 					class="w-3/5"
 				/>
 			</div>
-			<p class="p-4 space-y-4 text-justify">
+			<p class="p-4 space-y-4 ">
 				Lattice dynamics (LD) enables the calculation of mode-resolved transmittance of phonons
 				passing through an interface, which is essential for understanding and controlling the
 				thermal boundary conductance (TBC). However, the original LD method may yield unphysical

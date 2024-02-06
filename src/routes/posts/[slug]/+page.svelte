@@ -2,12 +2,13 @@
 	import { formatDate } from '$lib/utils';
 	import 'prismjs/themes/prism-okaidia.css';
 	export let data;
+	console.log(data);
 </script>
 
 <div class="page-container-narrow">
 	<!-- cover -->
 	<img
-		src={`/src/posts/${data.slug}/${data.meta.cover}`}
+		src={`${data.slug}/${data.meta.cover}`}
 		alt={data.meta.title}
 		class="w-full h-48 object-cover"
 	/>

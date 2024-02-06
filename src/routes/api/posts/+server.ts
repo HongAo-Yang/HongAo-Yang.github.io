@@ -4,7 +4,7 @@ import type { Post } from '$lib/types'
 async function getPosts() {
 	let posts: Post[] = []
 
-	const paths = import.meta.glob('/src/posts/*/main.md', { eager: true })
+	const paths = import.meta.glob('/static/posts/*/main.md', { eager: true })
 
 	for (const path in paths) {
 		const file = paths[path]
@@ -12,9 +12,6 @@ async function getPosts() {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>
-			if (metadata.cover) {
-				metadata.cover = `/src/posts/${slug}/${metadata.cover.split('/').at(-1)}`;
-			}
 			const post = { ...metadata, slug } satisfies Post
 			post.published && posts.push(post)
 		}
