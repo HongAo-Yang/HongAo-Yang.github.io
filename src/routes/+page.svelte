@@ -27,12 +27,7 @@
 				Mode-resolved phonon transmittance using lattice dynamics: Robust algorithm and statistical
 				characteristics
 			</p>
-			<a
-				href="https://doi.org/10.1063/5.0171201"
-				target="_blank"
-				rel="noreferrer"
-				class="anchor"
-			>
+			<a href="https://doi.org/10.1063/5.0171201" target="_blank" rel="noreferrer" class="anchor">
 				DOI <i class="fa-solid fa-external-link" />
 			</a>
 		</div>
@@ -44,5 +39,17 @@
 		>. 📷
 	</p>
 
-	<p>This site is under active development...🧑‍💻</p>
+	<p>Check out my friend's website:</p>
+	<div class="flex justify-center">
+		<a
+			class="card card-hover p-4 variant-ghost flex flex-col items-center space-y-4"
+			href="https://windsong.top"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<Avatar src="/windsong.top.png" width="w-36" />
+			<h3 class="h3">Yang Shen</h3>
+			<p>Expert in phonon Monte Carlo</p>
+		</a>
+	</div>
 </div>
